@@ -1,0 +1,164 @@
+const int mavi = 3; 
+const int yesil = 5;
+const int kirmizi = 6;
+int sicaklik =0;
+int sicaklikPin = 0;
+int renk1 =0;
+int renk2 =0;
+int renk3 =0;
+
+void setup() {
+pinMode(mavi, OUTPUT);
+pinMode(yesil, OUTPUT);
+pinMode(kirmizi, OUTPUT);
+}
+
+void loop() {
+sicaklik = analogRead(sicaklikPin);
+sicaklik = (5*sicaklik*100)/1024;
+
+if (sicaklik <=9) { //10 dereceden soğuksa...
+  analogWrite(mavi,0);
+  analogWrite(yesil,255);
+  analogWrite(kirmizi,255);
+  }
+  if (sicaklik >=36) { //35 dereceden sıcaksa...
+  analogWrite(mavi,255);
+  analogWrite(yesil,255);
+  analogWrite(kirmizi,0);
+  }
+  
+switch (sicaklik) {
+  case 10:
+  analogWrite(mavi,100);
+  analogWrite(yesil,255);
+  analogWrite(kirmizi,255);
+  break;
+  case 11:
+  analogWrite(mavi,110);
+  analogWrite(yesil,240);
+  analogWrite(kirmizi,255);
+  break;
+  case 12:
+  analogWrite(mavi,120);
+  analogWrite(yesil,230);
+  analogWrite(kirmizi,255);
+  break;
+  case 13:
+  analogWrite(mavi,130);
+  analogWrite(yesil,220);
+  analogWrite(kirmizi,255);
+  break;
+  case 14:
+  analogWrite(mavi,140);
+  analogWrite(yesil,200);
+  analogWrite(kirmizi,255);
+  break;
+  case 15:
+  analogWrite(mavi,150);
+  analogWrite(yesil,180);
+  analogWrite(kirmizi,255);
+  break;
+  case 16:
+  analogWrite(mavi,160);
+  analogWrite(yesil,170);
+  analogWrite(kirmizi,255);
+  break;
+  case 17:
+  analogWrite(mavi,170);
+  analogWrite(yesil,160);
+  analogWrite(kirmizi,230);
+  break;
+  case 18:
+  analogWrite(mavi,180);
+  analogWrite(yesil,150);
+  analogWrite(kirmizi,220);
+  break;
+  case 19:
+  analogWrite(mavi,190);
+  analogWrite(yesil,140);
+  analogWrite(kirmizi,210);
+  break;
+  case 20:
+  analogWrite(mavi,200);
+  analogWrite(yesil,130);
+  analogWrite(kirmizi,200);
+  case 21:
+  analogWrite(mavi,210);
+  analogWrite(yesil,120);
+  analogWrite(kirmizi,190);
+  break;
+    case 22:
+  analogWrite(mavi,220);
+  analogWrite(yesil,110);
+  analogWrite(kirmizi,180);
+  break;
+    case 23:
+  analogWrite(mavi,230);
+  analogWrite(yesil,100);
+  analogWrite(kirmizi,170);
+  break;
+    case 24:
+  analogWrite(mavi,240);
+  analogWrite(yesil,100);
+  analogWrite(kirmizi,160);
+  break;
+    case 25:
+  analogWrite(mavi,252);
+  analogWrite(yesil,100);
+  analogWrite(kirmizi,150);
+  break;
+    case 26:
+  analogWrite(mavi,255);
+  analogWrite(yesil,100);
+  analogWrite(kirmizi,140);
+  break;
+    case 27:
+  analogWrite(mavi,255);
+  analogWrite(yesil,100);
+  analogWrite(kirmizi,130);
+  break;
+    case 28:
+  analogWrite(mavi,255);
+  analogWrite(yesil,120);
+  analogWrite(kirmizi,120);
+  break;
+    case 29:
+  analogWrite(mavi,255);
+  analogWrite(yesil,140);
+  analogWrite(kirmizi,110);
+  break;
+    case 30:
+  analogWrite(mavi,255);
+  analogWrite(yesil,160);
+  analogWrite(kirmizi,100);
+  break;
+    case 31:
+  analogWrite(mavi,255);
+  analogWrite(yesil,180);
+  analogWrite(kirmizi,100);
+  break;
+    case 32:
+  analogWrite(mavi,255);
+  analogWrite(yesil,200);
+  analogWrite(kirmizi,100);
+  break;
+      case 33:
+  analogWrite(mavi,255);
+  analogWrite(yesil,220);
+  analogWrite(kirmizi,100);
+  break;
+      case 34:
+  analogWrite(mavi,255);
+  analogWrite(yesil,240);
+  analogWrite(kirmizi,100);
+  break;
+      case 35:
+  analogWrite(mavi,255);
+  analogWrite(yesil,255);
+  analogWrite(kirmizi,100);
+  break;
+  
+  }
+  delay(1000);
+}
