@@ -1,0 +1,19 @@
+//Katot RGB led'iniz varsa uzun ayağı GND'ye, Anot RGB LED'iniz varsa 5v'a bağlayın.
+//Diğer ayakları Arduino giriş çıkış pinlerine 220Ohm'luk dirençlerle bağlayın.
+
+const int mavi = 3; 
+const int yesil = 5;
+const int kirmizi = 6;
+
+void setup() {
+pinMode(mavi, OUTPUT);
+pinMode(yesil, OUTPUT);
+pinMode(kirmizi, OUTPUT);
+analogWrite(mavi, 255);
+analogWrite(yesil, 0);
+analogWrite(kirmizi, 255);
+}
+
+void loop() {
+
+}
